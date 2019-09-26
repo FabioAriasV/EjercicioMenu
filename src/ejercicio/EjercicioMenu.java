@@ -9,6 +9,7 @@ public class EjercicioMenu {
         int opcionDos= 0;
         double A=0;
         double B=0;
+        int opciontres=0;
        do{ 
         opcion = Integer.parseInt(JOptionPane.showInputDialog("ingrese un valor de las siguientes opciones"
             +"\n 1. Operaciones Basicas"
