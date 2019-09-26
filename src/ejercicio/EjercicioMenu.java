@@ -32,7 +32,7 @@ public class EjercicioMenu {
                 A=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el valor para la variable A:"));
                 B=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el valor para la variable B:"));
                 } catch(Exception e) {
-                JOptionPane.showMessageDialog(null, "ERROR: el valor de tipo String contiene caracteres no numéricos");
+                JOptionPane.showMessageDialog(null, "A ingresado una variable no valida");
                 }
                 JOptionPane.showMessageDialog(null, "A + B = " + (A + B));
                 
@@ -42,7 +42,7 @@ public class EjercicioMenu {
                 A=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el valor para la variable A:"));
                 B=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el valor para la variable B:"));
                 } catch(Exception e) {
-                JOptionPane.showMessageDialog(null, "ERROR: el valor de tipo String contiene caracteres no numéricos");
+                JOptionPane.showMessageDialog(null, "A ingresado una variable no valida");
                 }
                 JOptionPane.showMessageDialog(null, "A - B = " + (A - B));  
                 break;
@@ -51,7 +51,7 @@ public class EjercicioMenu {
                 A=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el valor para la variable A:"));
                 B=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el valor para la variable B:"));
                 } catch(Exception e) {
-                JOptionPane.showMessageDialog(null, "ERROR: el valor de tipo String contiene caracteres no numéricos");
+                JOptionPane.showMessageDialog(null, "A ingresado una variable no valida");
                 }
                 JOptionPane.showMessageDialog(null, "A * B = " + (A * B));
                 break;
@@ -60,7 +60,7 @@ public class EjercicioMenu {
                 A=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el valor para la variable A:"));
                 B=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el valor para la variable B:"));
                 } catch(Exception e) {
-                JOptionPane.showMessageDialog(null, "ERROR: el valor de tipo String contiene caracteres no numéricos");
+                JOptionPane.showMessageDialog(null, "A ingresado una variable no valida");
                 }
                 JOptionPane.showMessageDialog(null, "A / B = " + (A / B));
                 break;
