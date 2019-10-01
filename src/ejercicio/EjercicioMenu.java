@@ -9,7 +9,7 @@ public class EjercicioMenu {
         int opcionDos= 0;
         double A=0;
         double B=0;
-        int opciontres=0;
+        
        do{ 
         opcion = Integer.parseInt(JOptionPane.showInputDialog("ingrese un valor de las siguientes opciones"
             +"\n 1. Operaciones Basicas"
@@ -19,60 +19,52 @@ public class EjercicioMenu {
         
         switch(opcion){
             case 1:
-                do{
-        opcionDos = Integer.parseInt(JOptionPane.showInputDialog("ingrese un valor de las siguientes opciones"
+                do {   
+            opcionDos = Integer.parseInt(JOptionPane.showInputDialog("ingrese un valor de las siguientes opciones" 
             +"\n 1. Suma"
             +"\n 2. Resta"
             +"\n 3. Multiplicacion"
             +"\n 4. Division"
             +"\n 5. Volver al menu anterior"));
+            
+            switch(opcionDos){
+                case 1:
+                   Calculadora obj= new Calculadora();
+                   obj.sumar();
+                   break;
+                case 2:
+                    Calculadora res= new Calculadora();
+                    res.primerNumero=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el primer numero: "));
+                    res.segundoNumero=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el segundo numero: "));
+                    res.restar(res.primerNumero, res.segundoNumero);
+                   break;
+                   case 3:
+                    Calculadora mul= new Calculadora();
+                    JOptionPane.showMessageDialog(null,"La multiplicacion es de: "+mul.multiplicar());
+                   break;
+                case 4:
+                    Calculadora div= new Calculadora();
+                    div.primerNumero=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el primer numero: "));
+                    div.segundoNumero=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el segundo numero: "));
+                    div.dividir(div.primerNumero, div.segundoNumero);
+                    JOptionPane.showMessageDialog(null, "la division es: "+div.dividir(div.primerNumero, div.segundoNumero));
+                   break;
+                case 5:
+                    Calculadora sal= new Calculadora();
+                    sal.salir();
+                   break; 
+                   
+                default:
+                    Calculadora def= new Calculadora();
+                    def.mostrarMensaje();
+                   
+                   break;
+            }
+            
+        } while (opcionDos!=5);
         
-        switch(opcionDos){
-            case 1:
-                try {
-                A=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el valor para la variable A:"));
-                B=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el valor para la variable B:"));
-                } catch(Exception e) {
-                JOptionPane.showMessageDialog(null, "A ingresado una variable no valida");
-                }
-                JOptionPane.showMessageDialog(null, "A + B = " + (A + B));
-                
-                break;
-            case 2:
-                try {
-                A=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el valor para la variable A:"));
-                B=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el valor para la variable B:"));
-                } catch(Exception e) {
-                JOptionPane.showMessageDialog(null, "A ingresado una variable no valida");
-                }
-                JOptionPane.showMessageDialog(null, "A - B = " + (A - B));  
-                break;
-            case 3:
-                try {
-                A=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el valor para la variable A:"));
-                B=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el valor para la variable B:"));
-                } catch(Exception e) {
-                JOptionPane.showMessageDialog(null, "A ingresado una variable no valida");
-                }
-                JOptionPane.showMessageDialog(null, "A * B = " + (A * B));
-                break;
-            case 4:
-                try {
-                A=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el valor para la variable A:"));
-                B=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el valor para la variable B:"));
-                } catch(Exception e) {
-                JOptionPane.showMessageDialog(null, "A ingresado una variable no valida");
-                }
-                JOptionPane.showMessageDialog(null, "A / B = " + (A / B));
-                break;
-            case 5:
-                JOptionPane.showMessageDialog(null, "Salir");
-                break;
-            default:
-                JOptionPane.showMessageDialog(null, "No ingreso una opcion valida");
-             
-                }
-                }while(opcionDos !=5); 
+    
+
                 
                 break;
             case 2:
