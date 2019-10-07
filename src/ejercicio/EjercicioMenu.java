@@ -1,5 +1,6 @@
 package ejercicio;
 
+import java.util.Scanner;
 import javax.swing.JOptionPane;
 
 public class EjercicioMenu {
@@ -15,7 +16,8 @@ public class EjercicioMenu {
             +"\n 1. Operaciones Basicas"
             +"\n 2. Arreglo"
             +"\n 3. Matriz"
-            +"\n 4. Salir"));
+            +"\n 4. Metodo Burbuja"    
+            +"\n 5. Salir"));
         
         switch(opcion){
             case 1:
@@ -62,11 +64,8 @@ public class EjercicioMenu {
             }
             
         } while (opcionDos!=5);
-        
-    
-
-                
-                break;
+            
+            break;
             case 2:
                   String arregloNumeros[ ] = new String[3];
                   for(int n = 0; n < arregloNumeros.length; n++){
@@ -104,14 +103,45 @@ public class EjercicioMenu {
             JOptionPane.showMessageDialog(null, m[f][0] + " X " + m[f][1] + " = "+ m[f][2]);
             
         }
+        break;
+            case 4:  
+                
+        int vectorUno[] = new int[5];
+        
+        int auxiliar;
+        
+        // Cargue del primer vector
+        for(int i=0; i<5; i++){
+            
+            vectorUno[i] = vectorUno[i] =Integer.parseInt(JOptionPane.showInputDialog(null, "Digite un valor en la posicion ["+ i + "]:"));
+        }
+        // Método de la burbuja
+        for(int i=0; i<5; i++){
+            for(int j=0; j<5; j++){
+                // Si utilizo < me organiza de forma ascendente
+                // Si utilizo > me organiza de forma descendente
+                if(vectorUno[i] > vectorUno[j]){
+                    auxiliar = vectorUno[i];
+                    vectorUno[i] = vectorUno[j];
+                    vectorUno[j] = auxiliar;
+                }
+            }
+        }
+        
+        // Imprimir el vectorDos
+        for(int i=0; i<5 ; i++){
+           
+                JOptionPane.showMessageDialog(null,vectorUno[i]);
+        }
+    
              break;
-            case 4:
+            case 5:
                 JOptionPane.showMessageDialog(null, "Salir");
                 break;
             default:
                 JOptionPane.showMessageDialog(null, "No ingreso una opcion valida");
              break;
         }
-    }while(opcion !=4); 
+    }while(opcion !=5); 
 }
 }
