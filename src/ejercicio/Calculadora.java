@@ -34,7 +34,7 @@ public class Calculadora {
          return division;
      }
      public void salir() {
-       System.exit(0);
+         System.exit(0);
     }
 
     public void mostrarMensaje() {

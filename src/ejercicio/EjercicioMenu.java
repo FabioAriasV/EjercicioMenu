@@ -1,6 +1,6 @@
 package ejercicio;
 
-import java.util.Scanner;
+
 import javax.swing.JOptionPane;
 
 public class EjercicioMenu {
@@ -16,8 +16,9 @@ public class EjercicioMenu {
             +"\n 1. Operaciones Basicas"
             +"\n 2. Arreglo"
             +"\n 3. Matriz"
-            +"\n 4. Metodo Burbuja"    
-            +"\n 5. Salir"));
+            +"\n 4. Metodo Burbuja"
+            +"\n 5. Recursividad"              
+            +"\n 6. Salir"));
         
         switch(opcion){
             case 1:
@@ -107,7 +108,6 @@ public class EjercicioMenu {
             case 4:  
                 
         int vectorUno[] = new int[5];
-        
         int auxiliar;
         
         // Cargue del primer vector
@@ -127,21 +127,22 @@ public class EjercicioMenu {
                 }
             }
         }
-        
         // Imprimir el vectorDos
         for(int i=0; i<5 ; i++){
            
                 JOptionPane.showMessageDialog(null,vectorUno[i]);
-        }
-    
+        }    
              break;
-            case 5:
+            case 5:                                                                         
+     
+             break;
+            case 6:
                 JOptionPane.showMessageDialog(null, "Salir");
-                break;
+             break;
             default:
                 JOptionPane.showMessageDialog(null, "No ingreso una opcion valida");
              break;
         }
-    }while(opcion !=5); 
+    }while(opcion !=6); 
 }
 }
