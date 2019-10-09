@@ -12,6 +12,7 @@ public class EjercicioMenu {
         double B=0;
         
        do{ 
+           try {
         opcion = Integer.parseInt(JOptionPane.showInputDialog("ingrese un valor de las siguientes opciones"
             +"\n 1. Operaciones Basicas"
             +"\n 2. Arreglo"
@@ -19,17 +20,22 @@ public class EjercicioMenu {
             +"\n 4. Metodo Burbuja"
             +"\n 5. Recursividad"              
             +"\n 6. Salir"));
-        
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Solo ingrese numeros");
+            } 
         switch(opcion){
             case 1:
-                do {   
+                do {
+                    try {
             opcionDos = Integer.parseInt(JOptionPane.showInputDialog("ingrese un valor de las siguientes opciones" 
             +"\n 1. Suma"
             +"\n 2. Resta"
             +"\n 3. Multiplicacion"
             +"\n 4. Division"
             +"\n 5. Volver al menu anterior"));
-            
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(null, "Solo ingrese numeros");
+                } 
             switch(opcionDos){
                 case 1:
                    Calculadora obj= new Calculadora();
@@ -56,33 +62,34 @@ public class EjercicioMenu {
                     Calculadora sal= new Calculadora();
                     sal.salir();
                    break; 
-                   
-                default:
+                 default:
                     Calculadora def= new Calculadora();
                     def.mostrarMensaje();
-                   
-                   break;
+                    break;
             }
             
         } while (opcionDos!=5);
-            
             break;
             case 2:
-                  String arregloNumeros[ ] = new String[3];
+                try {
+                  int arregloNumeros[ ] = new int[3];
                   for(int n = 0; n < arregloNumeros.length; n++){
 
-                  arregloNumeros[n] = JOptionPane.showInputDialog(null, "Ingrese los valores del arreglo");
+                  arregloNumeros[n] = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese los valores del arreglo"));
 
                   }for(int n = 0; n < arregloNumeros.length; n++){
                   JOptionPane.showMessageDialog(null, arregloNumeros[n]);
                   }    
+                  } catch (Exception e) {
+                JOptionPane.showMessageDialog(null, "Solo ingrese numeros");
+                } 
                  break;
-            case 3:
-                
-            int numero = 0;
-            int m[][] = new int[10][3];
-            int f;
-            int c;
+            case 3:     
+                try {
+                  int numero = 0;
+                  int m[][] = new int[10][3];
+                  int f;
+                  int c;
         
             numero = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el valor para la variable A:"));
         
@@ -90,29 +97,25 @@ public class EjercicioMenu {
             for(c=0; c<3; c++){
                 if(c == 0)
                     m[f][c] = numero;
-                
                 if(c == 1)
                     m[f][c] = f +1;
-                
                 if(c == 2)
                     m[f][c] = numero * (f+1);
             }
         }
-        
         for(f=0; f<10; f++){
-            
-            JOptionPane.showMessageDialog(null, m[f][0] + " X " + m[f][1] + " = "+ m[f][2]);
-            
-        }
+                JOptionPane.showMessageDialog(null, m[f][0] + " X " + m[f][1] + " = "+ m[f][2]);
+           }
+        } catch (Exception e) {
+                JOptionPane.showMessageDialog(null, "Solo ingrese numeros");
+                } 
         break;
-            case 4:  
-                
+        case 4:                  
         int vectorUno[] = new int[5];
         int auxiliar;
         
         // Cargue del primer vector
         for(int i=0; i<5; i++){
-            
             vectorUno[i] = vectorUno[i] =Integer.parseInt(JOptionPane.showInputDialog(null, "Digite un valor en la posicion ["+ i + "]:"));
         }
         // Método de la burbuja
@@ -133,17 +136,21 @@ public class EjercicioMenu {
                 JOptionPane.showMessageDialog(null,vectorUno[i]);
         }    
              break;
-            case 5:                                                                         
-     
-                
+            case 5:    
+                Calculadora fac= new Calculadora();  
+                fac.N=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el numero a factorizar:"));
+                JOptionPane.showMessageDialog(null, "el factor es: "+fac.factorial(fac.N));
              break;
             case 6:
                 JOptionPane.showMessageDialog(null, "Salir");
              break;
             default:
-                JOptionPane.showMessageDialog(null, "No ingreso una opcion valida");
+                JOptionPane.showMessageDialog (null,"No ha ingresado una opcion valida");
+                JOptionPane.showMessageDialog (null,"Intente de nuevo...............");
              break;
         }
     }while(opcion !=6); 
 }
+
+     
 }

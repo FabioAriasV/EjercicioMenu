@@ -8,7 +8,7 @@ public class Calculadora {
 
     public int primerNumero;
     public int segundoNumero;
-      
+    public int N;  
     public void sumar(){
         int suma;
         this.primerNumero=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el primer numero: "));
@@ -34,9 +34,15 @@ public class Calculadora {
          return division;
      }
      public void salir() {
-         System.exit(0);
+         //System.exit(0);
     }
-
+  public double factorial(int n){
+      double factorial;
+    if (n==0)
+        return 1;
+    else
+        return n*(factorial(n-1));
+  }
     public void mostrarMensaje() {
         JOptionPane.showMessageDialog (null,"Ingrese su opción entre 1,2 o 3");
         JOptionPane.showMessageDialog (null,"Intente de nuevo...............");
