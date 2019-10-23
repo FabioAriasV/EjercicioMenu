@@ -18,8 +18,9 @@ public class EjercicioMenu {
             +"\n 2. Arreglo"
             +"\n 3. Matriz"
             +"\n 4. Metodo Burbuja"
-            +"\n 5. Recursividad"              
-            +"\n 6. Salir"));
+            +"\n 5. Recursividad"
+            +"\n 6. Ordenamiento Shell"              
+            +"\n 7. Salir"));
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Solo ingrese numeros");
             } 
@@ -123,7 +124,7 @@ public class EjercicioMenu {
         
         // Cargue del primer vector
         for(int i=0; i<5; i++){
-            vectorUno[i] = vectorUno[i] =Integer.parseInt(JOptionPane.showInputDialog(null, "Digite un valor en la posicion ["+ i + "]:"));
+            vectorUno[i] =Integer.parseInt(JOptionPane.showInputDialog(null, "Digite un valor en la posicion ["+ i + "]:"));
         }
         // Método de la burbuja
         for(int i=0; i<5; i++){
@@ -148,7 +149,10 @@ public class EjercicioMenu {
                 fac.N=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el numero a factorizar:"));
                 JOptionPane.showMessageDialog(null, "el factor es: "+fac.factorial(fac.N));
              break;
-            case 6:
+             case 6:
+                Calculadora.Ordenacionshell();
+             break;
+            case 7:
                 JOptionPane.showMessageDialog(null, "Salir");
              break;
             default:
@@ -156,7 +160,7 @@ public class EjercicioMenu {
                 JOptionPane.showMessageDialog (null,"Intente de nuevo...............");
              break;
         }
-    }while(opcion !=6); 
+    }while(opcion !=7); 
 }
 
      
