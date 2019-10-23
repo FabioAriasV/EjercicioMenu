@@ -38,18 +38,25 @@ public class EjercicioMenu {
                 } 
             switch(opcionDos){
                 case 1:
-                   Calculadora obj= new Calculadora();
-                   obj.sumar();
+                    Calculadora sum= new Calculadora();
+                    sum.primerNumero=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el primer numero: "));
+                    sum.segundoNumero=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el segundo numero: "));
+                    sum.sumar(sum.primerNumero, sum.segundoNumero);
+                    JOptionPane.showMessageDialog(null, "la suma es: "+sum.sumar(sum.primerNumero, sum.segundoNumero));
                    break;
                 case 2:
                     Calculadora res= new Calculadora();
                     res.primerNumero=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el primer numero: "));
                     res.segundoNumero=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el segundo numero: "));
                     res.restar(res.primerNumero, res.segundoNumero);
+                    JOptionPane.showMessageDialog(null, "la resta es: "+res.restar(res.primerNumero, res.segundoNumero));
                    break;
                    case 3:
                     Calculadora mul= new Calculadora();
-                    JOptionPane.showMessageDialog(null,"La multiplicacion es de: "+mul.multiplicar());
+                    mul.primerNumero=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el primer numero: "));
+                    mul.segundoNumero=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el segundo numero: "));
+                    mul.multiplicar(mul.primerNumero, mul.segundoNumero);
+                    JOptionPane.showMessageDialog(null, "la multiplicacion es: "+mul.multiplicar(mul.primerNumero, mul.segundoNumero));
                    break;
                 case 4:
                     Calculadora div= new Calculadora();

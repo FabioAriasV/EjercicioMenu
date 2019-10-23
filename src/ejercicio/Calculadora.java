@@ -9,23 +9,19 @@ public class Calculadora {
     public int primerNumero;
     public int segundoNumero;
     public int N;  
-    public void sumar(){
-        int suma;
-        this.primerNumero=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el primer numero: "));
-        this.segundoNumero=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el segundo numero: "));
-
-        suma=primerNumero+segundoNumero;
-        JOptionPane.showMessageDialog(null, "La suma es: "+suma);
+    public int sumar(int x,int y){
+         int sumar;
+         int suma=x+y;
+         return suma;
     }
-     public void restar(int x,int y){
+     public int restar(int x,int y){
+         int restar;
          int resta=x-y;
-         JOptionPane.showMessageDialog(null, "La resta es de " +resta);
+         return resta;
      }
-     public int multiplicar(){
+     public int multiplicar(int x,int y){
          int multiplicar;
-         this.primerNumero=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el primer numero: "));
-         this.segundoNumero=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el segundo numero: "));
-         multiplicar=primerNumero*segundoNumero;
+         multiplicar=(x*y);
          return multiplicar;
      }
      public float dividir(int x,int y){
