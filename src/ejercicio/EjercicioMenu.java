@@ -1,6 +1,8 @@
 package ejercicio;
 
 
+import java.util.ArrayList;
+import java.util.List;
 import javax.swing.JOptionPane;
 
 public class EjercicioMenu {
@@ -19,8 +21,9 @@ public class EjercicioMenu {
             +"\n 3. Matriz"
             +"\n 4. Metodo Burbuja"
             +"\n 5. Recursividad"
-            +"\n 6. Ordenamiento Shell"              
-            +"\n 7. Salir"));
+            +"\n 6. Ordenamiento Shell"
+            +"\n 7. Lista"              
+            +"\n 8. Salir"));
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Solo ingrese numeros");
             } 
@@ -153,6 +156,18 @@ public class EjercicioMenu {
                 Calculadora.Ordenacionshell();
              break;
             case 7:
+                List Lista = new ArrayList();
+                Lista.add("Juan");
+                Lista.add("Pedro");
+                Lista.add("José");
+                Lista.add("María");
+                Lista.add("Sofía");
+                 for (int i = 0; i <= Lista.size() - 1; i++) {
+            JOptionPane.showMessageDialog(null, Lista.get(i));
+        }
+
+             break;
+             case 8:
                 JOptionPane.showMessageDialog(null, "Salir");
              break;
             default:
@@ -160,7 +175,7 @@ public class EjercicioMenu {
                 JOptionPane.showMessageDialog (null,"Intente de nuevo...............");
              break;
         }
-    }while(opcion !=7); 
+    }while(opcion !=8); 
 }
 
      
