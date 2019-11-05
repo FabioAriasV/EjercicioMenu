@@ -3,6 +3,7 @@ package ejercicio;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 import javax.swing.JOptionPane;
 
 public class EjercicioMenu {
@@ -22,8 +23,9 @@ public class EjercicioMenu {
             +"\n 4. Metodo Burbuja"
             +"\n 5. Recursividad"
             +"\n 6. Ordenamiento Shell"
-            +"\n 7. Lista"              
-            +"\n 8. Salir"));
+            +"\n 7. Lista"
+            +"\n 8. Pila "              
+            +"\n 9. Salir"));
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Solo ingrese numeros");
             } 
@@ -168,6 +170,18 @@ public class EjercicioMenu {
 
              break;
              case 8:
+                Stack pila = new Stack();
+                pila.push(3); // Posicion 0
+                pila.push(5); // Posicion 1
+                pila.push("un 5 profe :D");
+
+                System.out.println("El ultimo elemento en la pila es: "+pila.peek());
+
+                while(pila.empty()==false){ //Mientras la pila no este vacia
+                System.out.println(pila.pop()); 
+                    }
+             break;
+             case 9:
                 JOptionPane.showMessageDialog(null, "Salir");
              break;
             default:
@@ -175,7 +189,7 @@ public class EjercicioMenu {
                 JOptionPane.showMessageDialog (null,"Intente de nuevo...............");
              break;
         }
-    }while(opcion !=8); 
+    }while(opcion !=9); 
 }
 
      
