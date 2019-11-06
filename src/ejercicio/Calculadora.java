@@ -13,6 +13,7 @@ public class Calculadora {
          int sumar;
          int suma=x+y;
          return suma;
+         
     }
      public int restar(int x,int y){
          int restar;
