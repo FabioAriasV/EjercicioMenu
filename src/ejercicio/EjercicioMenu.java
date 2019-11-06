@@ -89,9 +89,7 @@ public class EjercicioMenu {
                 try {
                   int arregloNumeros[ ] = new int[3];
                   for(int n = 0; n < arregloNumeros.length; n++){
-
                   arregloNumeros[n] = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese los valores del arreglo"));
-
                   }for(int n = 0; n < arregloNumeros.length; n++){
                   JOptionPane.showMessageDialog(null, arregloNumeros[n]);
                   }    
@@ -105,8 +103,7 @@ public class EjercicioMenu {
                   int m[][] = new int[10][3];
                   int f;
                   int c;
-        
-            numero = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el valor para la variable A:"));
+                  numero = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el valor para la variable A:"));
         
             for(f=0; f<10; f++){
             for(c=0; c<3; c++){
