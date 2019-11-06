@@ -11,8 +11,11 @@ public class EjercicioMenu {
     public static void main(String[] args) {
         int opcion = 0;
         int opcionDos= 0;
+        int opcionTres=0;
         double A=0;
         double B=0;
+        int elemento =0;
+        Cola colita = new Cola();
         
        do{ 
            try {
@@ -24,11 +27,10 @@ public class EjercicioMenu {
             +"\n 5. Recursividad"
             +"\n 6. Ordenamiento Shell"
             +"\n 7. Lista"
-            +"\n 8. Pila "              
-            +"\n 9. Salir"));
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Solo ingrese numeros");
-            } 
+            +"\n 8. Pila"
+            +"\n 9. Cola"              
+            +"\n 10. Salir"));
+        
         switch(opcion){
             case 1:
                 do {
@@ -39,9 +41,7 @@ public class EjercicioMenu {
             +"\n 3. Multiplicacion"
             +"\n 4. Division"
             +"\n 5. Volver al menu anterior"));
-            } catch (Exception e) {
-                JOptionPane.showMessageDialog(null, "Solo ingrese numeros");
-                } 
+            
             switch(opcionDos){
                 case 1:
                     Calculadora sum= new Calculadora();
@@ -80,7 +80,9 @@ public class EjercicioMenu {
                     def.mostrarMensaje();
                     break;
             }
-            
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(null, "Solo ingrese numeros");
+                } 
         } while (opcionDos!=5);
             break;
             case 2:
@@ -182,6 +184,67 @@ public class EjercicioMenu {
                     }
              break;
              case 9:
+                do{
+        
+            try {
+                opcionTres= Integer.parseInt(JOptionPane.showInputDialog(null,"1. Insertar un elemento en la Cola\n"
+                        + "2. Quitar un elemento en la Cola\n"
+                        + "3. ¿La cola está vacia?\n"
+                        + "4. Elemento ubicado al inicio de la cola\n"
+                        + "5. Tamaño de la cola\n"
+                        + "6. Salir","Menú de opciones de una Cola",
+                        JOptionPane.QUESTION_MESSAGE));
+                
+                switch(opcionTres){
+                    case 1:
+                        elemento = Integer.parseInt(JOptionPane.showInputDialog(null,"Ingresa el elemento","Insertando en la Cola",JOptionPane.QUESTION_MESSAGE));
+                        colita.insertar(elemento);
+                        break;
+                    case 2:
+                        if(!colita.estaVacia()){
+                        JOptionPane.showMessageDialog(null, "El elemento atendido es " + colita.quitar(),"Quitando elemento de la cola",JOptionPane.INFORMATION_MESSAGE);
+                        }else {
+                        JOptionPane.showMessageDialog(null, "La cola está vacia" ,"Cola Vacia",JOptionPane.INFORMATION_MESSAGE);
+                        }
+                       
+                        break;
+                    case 3:
+                        if(colita.estaVacia()){
+                        JOptionPane.showMessageDialog(null, "La Cola está Vacia","Cola Vacia",JOptionPane.INFORMATION_MESSAGE);
+                        
+                        }else{
+                        JOptionPane.showMessageDialog(null, "La Cola no está Vacia","Cola no Vacia",JOptionPane.INFORMATION_MESSAGE);
+                        }
+                        break;
+                    case 4:
+                        if(!colita.estaVacia()){
+                        JOptionPane.showMessageDialog(null, "El elemento ubicado al inicio de la Cola es "+colita.inicioCola(),"Cola Vacia",JOptionPane.INFORMATION_MESSAGE);
+                        }else{
+                        JOptionPane.showMessageDialog(null, "La Cola está Vacia","Cola Vacia",JOptionPane.INFORMATION_MESSAGE);
+                        }
+                        
+                        break;
+                    case 5 :
+                        JOptionPane.showMessageDialog(null, "El tamaño de la Cola es "+ colita.tamanioCola(),"Cola Vacia",JOptionPane.INFORMATION_MESSAGE);
+                        
+                        break;
+                        
+                    case 6 :
+                        JOptionPane.showMessageDialog(null, "Aplicación Finalizada","Fin",JOptionPane.INFORMATION_MESSAGE);
+                        break;
+                        
+                    default:
+                        JOptionPane.showMessageDialog(null, "Opción incorrecta","¡Cuidado!",JOptionPane.INFORMATION_MESSAGE);
+                     
+                }
+               
+            } catch (NumberFormatException n) {
+                JOptionPane.showMessageDialog(null, "Error" + n.getMessage());
+                        
+            }
+        
+        }while(opcionTres!=6);
+             case 10:
                 JOptionPane.showMessageDialog(null, "Salir");
              break;
             default:
@@ -189,7 +252,10 @@ public class EjercicioMenu {
                 JOptionPane.showMessageDialog (null,"Intente de nuevo...............");
              break;
         }
-    }while(opcion !=9); 
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Solo ingrese numeros");
+            } 
+    }while(opcion !=10); 
 }
 
      
