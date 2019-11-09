@@ -14,7 +14,7 @@ public class EjercicioMenu {
         int opcionTres=0;
         double A=0;
         double B=0;
-        int elemento =0;
+        int elemento;
         Cola colita = new Cola();
         
        do{ 
@@ -86,16 +86,19 @@ public class EjercicioMenu {
         } while (opcionDos!=5);
             break;
             case 2:
-                try {
-                  int arregloNumeros[ ] = new int[3];
-                  for(int n = 0; n < arregloNumeros.length; n++){
-                  arregloNumeros[n] = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese los valores del arreglo"));
-                  }for(int n = 0; n < arregloNumeros.length; n++){
-                  JOptionPane.showMessageDialog(null, arregloNumeros[n]);
-                  }    
-                  } catch (Exception e) {
-                JOptionPane.showMessageDialog(null, "Solo ingrese numeros");
-                } 
+             MenuArreglos a = new MenuArreglos(); 
+              a.Menu();
+        
+//                try {
+//                  int arregloNumeros[ ] = new int[3];
+//                  for(int n = 0; n < arregloNumeros.length; n++){
+//                  arregloNumeros[n] = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese los valores del arreglo"));
+//                  }for(int n = 0; n < arregloNumeros.length; n++){
+//                  JOptionPane.showMessageDialog(null, arregloNumeros[n]);
+//                  }    
+//                  } catch (Exception e) {
+//                JOptionPane.showMessageDialog(null, "Solo ingrese numeros");
+//                } 
                  break;
             case 3:     
                 try {
