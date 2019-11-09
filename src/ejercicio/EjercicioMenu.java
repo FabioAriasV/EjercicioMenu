@@ -80,50 +80,19 @@ public class EjercicioMenu {
                     def.mostrarMensaje();
                     break;
             }
-            } catch (Exception e) {
+            }catch (Exception e) {
                 JOptionPane.showMessageDialog(null, "Solo ingrese numeros");
                 } 
-        } while (opcionDos!=5);
+        }while (opcionDos!=5);
             break;
             case 2:
-             MenuArreglos a = new MenuArreglos(); 
-              a.Menu();
-        
-//                try {
-//                  int arregloNumeros[ ] = new int[3];
-//                  for(int n = 0; n < arregloNumeros.length; n++){
-//                  arregloNumeros[n] = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese los valores del arreglo"));
-//                  }for(int n = 0; n < arregloNumeros.length; n++){
-//                  JOptionPane.showMessageDialog(null, arregloNumeros[n]);
-//                  }    
-//                  } catch (Exception e) {
-//                JOptionPane.showMessageDialog(null, "Solo ingrese numeros");
-//                } 
-                 break;
-            case 3:     
-                try {
-                  int numero = 0;
-                  int m[][] = new int[10][3];
-                  int f;
-                  int c;
-                  numero = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el valor para la variable A:"));
-        
-            for(f=0; f<10; f++){
-            for(c=0; c<3; c++){
-                if(c == 0)
-                    m[f][c] = numero;
-                if(c == 1)
-                    m[f][c] = f +1;
-                if(c == 2)
-                    m[f][c] = numero * (f+1);
-            }
-        }
-        for(f=0; f<10; f++){
-                JOptionPane.showMessageDialog(null, m[f][0] + " X " + m[f][1] + " = "+ m[f][2]);
-           }
-        } catch (Exception e) {
-                JOptionPane.showMessageDialog(null, "Solo ingrese numeros");
-                } 
+             MenuArreglos menu = new MenuArreglos(); 
+             menu.Menu();
+            break;
+            case 3:
+                MenuMatriz menuDos = new MenuMatriz();
+                menuDos.Menu();
+//                
         break;
         case 4:                  
         int vectorUno[] = new int[5];
