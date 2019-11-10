@@ -46,10 +46,10 @@ public class MenuArreglos {
                     JOptionPane.showMessageDialog (null,"No ha ingresado una opcion valida");
                     JOptionPane.showMessageDialog (null,"Intente de nuevo...............");
                 break;
-            }
-            } catch (Exception e) {
+                }
+                } catch (Exception e) {
                     JOptionPane.showMessageDialog(null, "Solo ingrese numeros");
                 } 
         }while (opcionDos!=3);
-}
+    }
 }

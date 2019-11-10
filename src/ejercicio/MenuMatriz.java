@@ -29,22 +29,21 @@ public class MenuMatriz {
                   int f;
                   int c;
                   numero = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el valor para la variable A:"));
-        
-            for(f=0; f<10; f++){
-            for(c=0; c<3; c++){
-                if(c == 0)
-                    m[f][c] = numero;
-                if(c == 1)
-                    m[f][c] = f +1;
-                if(c == 2)
-                    m[f][c] = numero * (f+1);
-            }
-            }
+                  for(f=0; f<10; f++){
+                  for(c=0; c<3; c++){
+                        if(c == 0)
+                            m[f][c] = numero;
+                        if(c == 1)
+                            m[f][c] = f +1;
+                        if(c == 2)
+                            m[f][c] = numero * (f+1);
+                    }
+                    }
                 break;
                 case 2:
                     for(f=0; f<10; f++){
                     JOptionPane.showMessageDialog(null, m[f][0] + " X " + m[f][1] + " = "+ m[f][2]);
-           }
+                }
                 break;
                 case 3:
                     JOptionPane.showMessageDialog(null, "Regresando...");
@@ -57,10 +56,10 @@ public class MenuMatriz {
                     JOptionPane.showMessageDialog (null,"No ha ingresado una opcion valida");
                     JOptionPane.showMessageDialog (null,"Intente de nuevo...............");
                 break;
-            }
-            } catch (Exception e) {
+                }
+                }catch (Exception e) {
                     JOptionPane.showMessageDialog(null, "Solo ingrese numeros");
                 } 
         }while (opcionDos!=3);
-}
+    }
 }

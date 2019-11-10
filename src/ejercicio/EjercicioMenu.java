@@ -21,9 +21,9 @@ public class EjercicioMenu {
            try {
         opcion = Integer.parseInt(JOptionPane.showInputDialog("ingrese un valor de las siguientes opciones"
             +"\n 1. Operaciones Basicas"
-            +"\n 2. Arreglo"
-            +"\n 3. Matriz"
-            +"\n 4. Metodo Burbuja"
+            +"\n 2. Arreglos"
+            +"\n 3. Matrices"
+            +"\n 4. Ordenamientos"
             +"\n 5. Recursividad"
             +"\n 6. Ordenamiento Shell"
             +"\n 7. Lista"
@@ -91,42 +91,20 @@ public class EjercicioMenu {
             break;
             case 3:
                 MenuMatriz menuDos = new MenuMatriz();
-                menuDos.Menu();
-//                
-        break;
-        case 4:                  
-        int vectorUno[] = new int[5];
-        int auxiliar;
-        
-        // Cargue del primer vector
-        for(int i=0; i<5; i++){
-            vectorUno[i] =Integer.parseInt(JOptionPane.showInputDialog(null, "Digite un valor en la posicion ["+ i + "]:"));
-        }
-        // Método de la burbuja
-        for(int i=0; i<5; i++){
-            for(int j=0; j<5; j++){
-                // Si utilizo < me organiza de forma ascendente
-                // Si utilizo > me organiza de forma descendente
-                if(vectorUno[i] > vectorUno[j]){
-                    auxiliar = vectorUno[i];
-                    vectorUno[i] = vectorUno[j];
-                    vectorUno[j] = auxiliar;
-                }
-            }
-        }
-        // Imprimir el vectorDos
-        for(int i=0; i<5 ; i++){
-           
-                JOptionPane.showMessageDialog(null,vectorUno[i]);
-        }    
-             break;
+                menuDos.Menu();//               
+            break;
+            case 4:
+            Ordenamientos menuTres = new Ordenamientos();
+            menuTres.Menu();
+            
+            break;
             case 5:    
                 Calculadora fac= new Calculadora();  
                 fac.N=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el numero a factorizar:"));
                 JOptionPane.showMessageDialog(null, "el factor es: "+fac.factorial(fac.N));
              break;
              case 6:
-                Calculadora.Ordenacionshell();
+                
              break;
             case 7:
                 List Lista = new ArrayList();
