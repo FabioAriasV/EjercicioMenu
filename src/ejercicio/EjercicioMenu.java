@@ -24,7 +24,8 @@ public class EjercicioMenu {
             +"\n 2. Arreglos"
             +"\n 3. Matrices"
             +"\n 4. Ordenamientos"
-            +"\n 5. Recursividad"
+            +"\n 5. Listas"
+            +"\n 6. Recursividad"
             +"\n 6. Ordenamiento Shell"
             +"\n 7. Lista"
             +"\n 8. Pila"
@@ -79,44 +80,35 @@ public class EjercicioMenu {
                     Calculadora def= new Calculadora();
                     def.mostrarMensaje();
                     break;
-            }
-            }catch (Exception e) {
+                }
+                }catch (Exception e) {
                 JOptionPane.showMessageDialog(null, "Solo ingrese numeros");
                 } 
-        }while (opcionDos!=5);
-            break;
-            case 2:
-             MenuArreglos menu = new MenuArreglos(); 
-             menu.Menu();
-            break;
-            case 3:
-                MenuMatriz menuDos = new MenuMatriz();
-                menuDos.Menu();//               
-            break;
-            case 4:
-            Ordenamientos menuTres = new Ordenamientos();
-            menuTres.Menu();
-            
-            break;
-            case 5:    
-                Calculadora fac= new Calculadora();  
-                fac.N=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el numero a factorizar:"));
-                JOptionPane.showMessageDialog(null, "el factor es: "+fac.factorial(fac.N));
-             break;
+                }while (opcionDos!=5);
+                break;
+                case 2:
+                    MenuArreglos menu = new MenuArreglos(); 
+                    menu.Menu();
+                break;
+                case 3:
+                    MenuMatriz menuDos = new MenuMatriz();
+                    menuDos.Menu();//               
+                break;
+                case 4:
+                    Ordenamientos menuTres = new Ordenamientos();
+                    menuTres.Menu();
+                break;
+                case 5:    
+                    Listas menuCuatro = new Listas();
+                    menuCuatro.Menu();
+                break;
              case 6:
-                
+               Calculadora fac= new Calculadora();  
+                fac.N=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el numero a factorizar:"));
+                JOptionPane.showMessageDialog(null, "el factor es: "+fac.factorial(fac.N)); 
              break;
             case 7:
-                List Lista = new ArrayList();
-                Lista.add("Juan");
-                Lista.add("Pedro");
-                Lista.add("José");
-                Lista.add("María");
-                Lista.add("Sofía");
-                 for (int i = 0; i <= Lista.size() - 1; i++) {
-            JOptionPane.showMessageDialog(null, Lista.get(i));
-        }
-
+               
              break;
              case 8:
                 Stack pila = new Stack();
