@@ -33,13 +33,8 @@ public class Calculadora {
      public void salir() {
          //System.exit(0);
     }
-  public double factorial(int n){
-      double factorial;
-    if (n==0)
-        return 1;
-    else
-        return n*(factorial(n-1));
-  }
+  
+  
  
        
     

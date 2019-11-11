@@ -25,11 +25,10 @@ public class EjercicioMenu {
             +"\n 3. Matrices"
             +"\n 4. Ordenamientos"
             +"\n 5. Listas"
-            +"\n 6. Recursividad"
-            +"\n 6. Ordenamiento Shell"
-            +"\n 7. Lista"
-            +"\n 8. Pila"
-            +"\n 9. Cola"              
+            +"\n 6. Pila"
+            +"\n 7. Cola"
+            +"\n 8. Arboles"
+            +"\n 9. Grafos"                          
             +"\n 10. Salir"));
         
         switch(opcion){
@@ -99,18 +98,17 @@ public class EjercicioMenu {
                     menuTres.Menu();
                 break;
                 case 5:    
-                    Listas menuCuatro = new Listas();
+                    MenuListas menuCuatro = new MenuListas();
                     menuCuatro.Menu();
                 break;
-             case 6:
-               Calculadora fac= new Calculadora();  
-                fac.N=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el numero a factorizar:"));
-                JOptionPane.showMessageDialog(null, "el factor es: "+fac.factorial(fac.N)); 
-             break;
-            case 7:
+                case 6:
+                    MenuPilas menuCinco = new MenuPilas();
+                    menuCinco.Menu();
+                break;
+                case 7:
                
-             break;
-             case 8:
+                break;
+                case 8:
                 Stack pila = new Stack();
                 pila.push(3); // Posicion 0
                 pila.push(5); // Posicion 1

@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
  *
  * @author Andres
  */
-public class Listas {
+public class MenuListas {
     int opcion=0;
     public void Menu(){
     do {
