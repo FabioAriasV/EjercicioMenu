@@ -68,9 +68,7 @@ public class MenuListas {
                 } 
         }while (opcionDos!=4);
     }
-//    protected Nodo primero;
-//    protected Nodo ultimo;
-//    protected int tamano = 0;
+
     Nodo primero;
     Nodo ultimo;
     int tamano = 0;

@@ -1,23 +1,15 @@
 package ejercicio;
 
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Stack;
 import javax.swing.JOptionPane;
-
 public class EjercicioMenu {
     
     public static void main(String[] args) {
         int opcion = 0;
-        int opcionDos= 0;
-        int opcionTres=0;
+        int opcionDos= 0;        
         double A=0;
-        double B=0;
-        int elemento;
-        Cola colita = new Cola();
-        
-       do{ 
+        double B=0;    
+                
+        do{ 
            try {
         opcion = Integer.parseInt(JOptionPane.showInputDialog("ingrese un valor de las siguientes opciones"
             +"\n 1. Operaciones Basicas"
@@ -106,92 +98,27 @@ public class EjercicioMenu {
                     menuCinco.Menu();
                 break;
                 case 7:
+                    MenuColas menuSeis = new MenuColas();
+                    menuSeis.Menu();
                
                 break;
                 case 8:
-                Stack pila = new Stack();
-                pila.push(3); // Posicion 0
-                pila.push(5); // Posicion 1
-                pila.push("un 5 profe :D");
-
-                System.out.println("El ultimo elemento en la pila es: "+pila.peek());
-
-                while(pila.empty()==false){ //Mientras la pila no este vacia
-                System.out.println(pila.pop()); 
-                    }
-             break;
-             case 9:
-                do{
-        
-            try {
-                opcionTres= Integer.parseInt(JOptionPane.showInputDialog(null,"1. Insertar un elemento en la Cola\n"
-                        + "2. Quitar un elemento en la Cola\n"
-                        + "3. ¿La cola está vacia?\n"
-                        + "4. Elemento ubicado al inicio de la cola\n"
-                        + "5. Tamaño de la cola\n"
-                        + "6. Salir","Menú de opciones de una Cola",
-                        JOptionPane.QUESTION_MESSAGE));
                 
-                switch(opcionTres){
-                    case 1:
-                        elemento = Integer.parseInt(JOptionPane.showInputDialog(null,"Ingresa el elemento","Insertando en la Cola",JOptionPane.QUESTION_MESSAGE));
-                        colita.insertar(elemento);
-                        break;
-                    case 2:
-                        if(!colita.estaVacia()){
-                        JOptionPane.showMessageDialog(null, "El elemento atendido es " + colita.quitar(),"Quitando elemento de la cola",JOptionPane.INFORMATION_MESSAGE);
-                        }else {
-                        JOptionPane.showMessageDialog(null, "La cola está vacia" ,"Cola Vacia",JOptionPane.INFORMATION_MESSAGE);
-                        }
-                       
-                        break;
-                    case 3:
-                        if(colita.estaVacia()){
-                        JOptionPane.showMessageDialog(null, "La Cola está Vacia","Cola Vacia",JOptionPane.INFORMATION_MESSAGE);
-                        
-                        }else{
-                        JOptionPane.showMessageDialog(null, "La Cola no está Vacia","Cola no Vacia",JOptionPane.INFORMATION_MESSAGE);
-                        }
-                        break;
-                    case 4:
-                        if(!colita.estaVacia()){
-                        JOptionPane.showMessageDialog(null, "El elemento ubicado al inicio de la Cola es "+colita.inicioCola(),"Cola Vacia",JOptionPane.INFORMATION_MESSAGE);
-                        }else{
-                        JOptionPane.showMessageDialog(null, "La Cola está Vacia","Cola Vacia",JOptionPane.INFORMATION_MESSAGE);
-                        }
-                        
-                        break;
-                    case 5 :
-                        JOptionPane.showMessageDialog(null, "El tamaño de la Cola es "+ colita.tamanioCola(),"Cola Vacia",JOptionPane.INFORMATION_MESSAGE);
-                        
-                        break;
-                        
-                    case 6 :
-                        JOptionPane.showMessageDialog(null, "Aplicación Finalizada","Fin",JOptionPane.INFORMATION_MESSAGE);
-                        break;
-                        
-                    default:
-                        JOptionPane.showMessageDialog(null, "Opción incorrecta","¡Cuidado!",JOptionPane.INFORMATION_MESSAGE);
-                     
-                }
-               
-            } catch (NumberFormatException n) {
-                JOptionPane.showMessageDialog(null, "Error" + n.getMessage());
-                        
-            }
-        
-        }while(opcionTres!=6);
-             case 10:
+                    
+                break;
+                case 9:
+                
+                case 10:
                 JOptionPane.showMessageDialog(null, "Salir");
-             break;
-            default:
+                break;
+                default:
                 JOptionPane.showMessageDialog (null,"No ha ingresado una opcion valida");
                 JOptionPane.showMessageDialog (null,"Intente de nuevo...............");
-             break;
-        }
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Solo ingrese numeros");
-            } 
+                break;
+                }
+                }catch (Exception e) {
+                JOptionPane.showMessageDialog(null, "Solo ingrese numeros");
+                } 
     }while(opcion !=10); 
 }
 

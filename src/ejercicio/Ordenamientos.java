@@ -75,7 +75,7 @@ public class Ordenamientos {
                 }catch (Exception e) {
                     JOptionPane.showMessageDialog(null, "Solo ingrese numeros");
                 } 
-                }while (opcionDos!=5);
+                }while (opcionDos!=4);
                 break;
                 case 2:
                   do {
@@ -136,7 +136,7 @@ public class Ordenamientos {
                 }catch (Exception e) {
                     JOptionPane.showMessageDialog(null, "Solo ingrese numeros");
                 } 
-                }while (opcionTres!=5);
+                }while (opcionTres!=4);
                 break;
                 case 3:
                     JOptionPane.showMessageDialog(null, "Regresando...");
@@ -153,7 +153,7 @@ public class Ordenamientos {
                 } catch (Exception e) {
                     JOptionPane.showMessageDialog(null, "Solo ingrese numeros");
                 } 
-        }while (opcion!=4);
+        }while (opcion!=3);
     }
 }
 
