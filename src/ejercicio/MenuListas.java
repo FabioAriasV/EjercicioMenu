@@ -5,8 +5,7 @@
  */
 package ejercicio;
 
-import java.util.ArrayList;
-import java.util.List;
+
 import javax.swing.JOptionPane;
 
 /**
@@ -14,38 +13,43 @@ import javax.swing.JOptionPane;
  * @author Andres
  */
 public class MenuListas {
-    int opcion=0;
     public void Menu(){
+    int opcionDos=0;
+    String elemento;
+    MenuListas listaSimple = new MenuListas();
     do {
         try {
-            opcion = Integer.parseInt(JOptionPane.showInputDialog("ingrese un valor de las siguientes opciones" 
+            opcionDos = Integer.parseInt(JOptionPane.showInputDialog("ingrese un valor de las siguientes opciones" 
             +"\n 1. Insertar datos"
             +"\n 2. Mostrar lista"
             +"\n 3. Limpiar lista"
             +"\n 4. Volver al menu anterior"
             +"\n 5. Salir"));
             
-            switch(opcion){
+            switch(opcionDos){
                 case 1:
-                    List<String> optionList = new ArrayList<String>();
-                    optionList.add("Ham");
-                    optionList.add("Eggs");
-                    optionList.add("Bacon");
-                    Object[] options = optionList.toArray();
-                    Object value = JOptionPane.showInputDialog(null, 
-                    "Favorite Food", 
-                    "Food", 
-                    JOptionPane.QUESTION_MESSAGE, 
-                    null,
-                    options, 
-                    options[0]);
-                    int index = optionList.indexOf(value);
+                elemento = JOptionPane.showInputDialog(null, "Insertar un Nodo.");
+                listaSimple.insertar(elemento);                  
+                      
                 break;
                 case 2:
-                    
+                if(!listaSimple.listaVacia()){
+                listaSimple.mostrarListaInicioFin();
+                }else{
+                JOptionPane.showMessageDialog(null, "No hay nodos en la lista",
+                "Lista Vacia", JOptionPane.ERROR_MESSAGE);
+                }
                 break;
                 case 3:
-                    
+                
+                       
+                if(!listaSimple.listaVacia()){
+                listaSimple.limpiarLista();
+                JOptionPane.showMessageDialog(null, "La pila se ha limpiado correctamente.");
+                }else{
+                JOptionPane.showMessageDialog(null, "No hay datos en la pila.",
+                "Pila Vacia", JOptionPane.INFORMATION_MESSAGE);
+                }    
                 break;
                 case 4:
                     JOptionPane.showMessageDialog(null, "Regresando...");
@@ -62,8 +66,77 @@ public class MenuListas {
                 } catch (Exception e) {
                     JOptionPane.showMessageDialog(null, "Solo ingrese numeros");
                 } 
-        }while (opcion!=4);
+        }while (opcionDos!=4);
     }
+//    protected Nodo primero;
+//    protected Nodo ultimo;
+//    protected int tamano = 0;
+    Nodo primero;
+    Nodo ultimo;
+    int tamano = 0;
+    public void insertar(String o) {
+            Nodo nuevoNodo = new Nodo();
+            nuevoNodo.setInformacion(o);
+        
+            if(primero == null){
+            primero = nuevoNodo;
+            primero.setSiguiente(null);
+            ultimo  = primero;
+            tamano += 1;
+        }else{
+            ultimo.setSiguiente(nuevoNodo);
+            nuevoNodo.setSiguiente(null);
+            ultimo = nuevoNodo;
+            tamano += 1;
+        }
+      }
+    public void mostrarListaInicioFin(){
+            if(!listaVacia()){
+            String datos = "";
+            Nodo auxiliar = primero;
+            while(auxiliar != null){
+            datos = datos + "[" + auxiliar.getInformacion() + "] =>";
+            auxiliar = auxiliar.getSiguiente();
+            }
+            JOptionPane.showMessageDialog(null, datos,
+            "Mostrando Lista Inicio a Fin",
+            JOptionPane.INFORMATION_MESSAGE);
+        }
+    }
+    public void limpiarLista() {
+        Nodo nodo;
+        while(!listaVacia()) {
+            nodo = primero;
+            nodo.siguiente = null;
+            primero = primero.siguiente;
+        }
+    }
+    public boolean listaVacia() {
+            if (primero == null)
+              return true;
+            else
+              return false;
+          }
+    public class Nodo {
+            private String informacion;
+            private Nodo siguiente;
+
+    public String getInformacion() {
+            return informacion;
+    }
+
+    public void setInformacion(String informacion) {
+            this.informacion = informacion;
+    }
+
+    public Nodo getSiguiente() {
+            return siguiente;
+    }
+
+    public void setSiguiente(Nodo siguiente) {
+            this.siguiente = siguiente;
+    }
+}
 }
    
 
