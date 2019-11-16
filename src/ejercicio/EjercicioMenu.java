@@ -61,6 +61,7 @@ public class EjercicioMenu {
                     JOptionPane.showMessageDialog(null, "la division es: "+div.dividir(div.primerNumero, div.segundoNumero));
                    break;
                 case 5:
+                    JOptionPane.showMessageDialog(null, "Regresando...");
                     Calculadora sal= new Calculadora();
                     sal.salir();
                    break; 
@@ -100,13 +101,13 @@ public class EjercicioMenu {
                 break;
                 case 8:
                     MenuArboles menuSiete = new MenuArboles();
-                    menuSiete.Menu();
-                                        
+                    menuSiete.Menu();                                        
                 break;
                 case 9:
-                
+                    MenuGrafos menuOcho = new MenuGrafos();
+                    menuOcho.Menu();
                 case 10:
-                JOptionPane.showMessageDialog(null, "Salir");
+                
                 break;
                 default:
                 JOptionPane.showMessageDialog (null,"No ha ingresado una opcion valida");

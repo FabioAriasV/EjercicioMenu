@@ -23,7 +23,8 @@ public class MenuPilas {
             +"\n 2. Mostrar la cima"
             +"\n 3. Sacar dato de la cima"
             +"\n 4. Limpiar pila"
-            +"\n 5. Salir"));
+            +"\n 5. Volver al menu anterior"
+            +"\n 6. Salir"));
             
             switch(opcionDos){
                 case 1:
@@ -64,6 +65,9 @@ public class MenuPilas {
                 }
                 break;
                 case 5:
+                    JOptionPane.showMessageDialog(null, "Regresando...");
+                break;
+                case 6:
                     JOptionPane.showMessageDialog(null, "Finalizando aplicación");
                     System.exit(0);
                 break;
@@ -75,7 +79,7 @@ public class MenuPilas {
                 } catch (Exception e) {
                     JOptionPane.showMessageDialog(null, "Solo ingrese numeros");
                 } 
-        }while (opcionDos!=3);
+        }while (opcionDos!=5);
     }
     NodoPila cima = null;
     public  void insertarDato(int dato) {
