@@ -6,9 +6,6 @@ public class EjercicioMenu {
     public static void main(String[] args) {
         int opcion = 0;
         int opcionDos= 0;        
-        double A=0;
-        double B=0;    
-                
         do{ 
            try {
         opcion = Integer.parseInt(JOptionPane.showInputDialog("ingrese un valor de las siguientes opciones"
@@ -99,12 +96,12 @@ public class EjercicioMenu {
                 break;
                 case 7:
                     MenuColas menuSeis = new MenuColas();
-                    menuSeis.Menu();
-               
+                    menuSeis.Menu();                                    
                 break;
                 case 8:
-                
-                    
+                    MenuArboles menuSiete = new MenuArboles();
+                    menuSiete.Menu();
+                                        
                 break;
                 case 9:
                 
@@ -122,5 +119,6 @@ public class EjercicioMenu {
     }while(opcion !=10); 
 }
 
-     
 }
+     
+

@@ -32,11 +32,7 @@ public class Calculadora {
      }
      public void salir() {
          //System.exit(0);
-    }
-  
-  
- 
-       
+    }           
     
     public void mostrarMensaje() {
         JOptionPane.showMessageDialog (null,"Ingrese su opción entre 1,2 o 3");
